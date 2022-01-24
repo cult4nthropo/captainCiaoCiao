@@ -1,4 +1,4 @@
-public class Faculty {
+public class Factorial {
     public static void main (String [] args) {
         System.out.println("How many people does the crew have?");
         long numberOfPeople = new java.util.Scanner(System.in).nextLong();
