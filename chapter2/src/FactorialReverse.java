@@ -1,4 +1,4 @@
-package CaptainCiaoCiao.chapter2.src;
+package captainCiaoCiao.CaptainCiaoCiao.chapter2.src;
 
 public class FactorialReverse {
     public static void main (String [] args) {
