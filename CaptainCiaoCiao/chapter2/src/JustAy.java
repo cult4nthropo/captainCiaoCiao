@@ -1,3 +1,5 @@
+package CaptainCiaoCiao.chapter2.src;
+
 public class JustAy {
     public static void main (String[]args) {
         System.out.println("Anything to tell?");

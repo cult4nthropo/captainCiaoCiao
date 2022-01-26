@@ -1,4 +1,4 @@
-
+package CaptainCiaoCiao.chapter2.src;
 
 public class AnkerDomino {
     public static void main(String[] args) {

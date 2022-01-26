@@ -1,3 +1,5 @@
+package CaptainCiaoCiao.chapter2.src;
+
 public class volumeConverter {
     public static void main (String[] args) {
         System.out.println("How many liter of liquid do we have?");

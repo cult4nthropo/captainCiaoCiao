@@ -1,3 +1,5 @@
+package CaptainCiaoCiao.chapter2.src;
+
 import java.util.Scanner;
 
 public class SummingCalculator {

@@ -1,3 +1,5 @@
+package CaptainCiaoCiao.chapter2.src;
+
 import java.util.Locale;
 import java.util.Random;
 

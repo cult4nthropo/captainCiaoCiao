@@ -1,3 +1,5 @@
+package CaptainCiaoCiao.chapter2.src;
+
 public class PayDay {
     public static void main (String[]args){
         int payed = new java.util.Scanner(System.in).nextInt();

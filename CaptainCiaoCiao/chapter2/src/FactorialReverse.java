@@ -1,3 +1,5 @@
+package CaptainCiaoCiao.chapter2.src;
+
 public class FactorialReverse {
     public static void main (String [] args) {
         System.out.println("Just give me a number and I tell you if it is a factorial.");

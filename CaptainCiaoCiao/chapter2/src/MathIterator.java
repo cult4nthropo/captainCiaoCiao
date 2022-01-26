@@ -1,3 +1,5 @@
+package CaptainCiaoCiao.chapter2.src;
+
 public class MathIterator {
     public static void main (String [] args) {
         double t = Math.random() * 10;

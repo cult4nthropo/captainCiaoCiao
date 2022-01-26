@@ -1,3 +1,5 @@
+package CaptainCiaoCiao.chapter2.src;
+
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;

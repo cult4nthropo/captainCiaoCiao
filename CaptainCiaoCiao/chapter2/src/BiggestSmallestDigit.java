@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+package CaptainCiaoCiao.chapter2.src;
 
 public class BiggestSmallestDigit {
     public static void main (String [] args) {
