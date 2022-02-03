@@ -5,14 +5,16 @@ public class RightTriangle {
 
     }
     public static boolean isRightTriangle( double x, double y, double z) {
-        boolean rightTriangle = false;
-        if ((x * x + (y * y)) == (z * z)) {
-            rightTriangle = true;
-        } else if ((z * z + (x * x)) == (y * y)) {
-            rightTriangle = true;
-        } else if ((z * z + (y * y)) == (x * x)) {
-            rightTriangle = true;
+
+        if (x > y && x > z) {
+           double swap = z;
+           z = x;
+           x = swap;
+            } else if (y > z && y > x) {
+            double swap = z;
+            z = y;
+            y = swap;
         }
-        return rightTriangle;
+        return (x * x) + (y * y) == (z * z);
     }
 }

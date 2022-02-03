@@ -6,12 +6,10 @@ public class Lines {
         for(int i = 0; i < len; i++){
             System.out.print(c);
         }
-        System.out.println();
     }
 
     public void line(int len) {
         line(len, '-');
-        System.out.println();
     }
 
     public void line(String prefix, int len, char c, String suffix) {
