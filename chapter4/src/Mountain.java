@@ -2,7 +2,7 @@ package src;
 
 public class Mountain {
     public static void main (String[] args) {
-        int[] altitudes = {0, 1, 1, 2, 2, 3, 3, 3, 4, 5, 4, 3, 2 ,2 ,1, 0};
+        int[] altitudes = {0, 1, 1, 2, 3, 4, 3, 2, 3, 4, 3, 4, 5, 4, 3, 2 ,2 ,1, 0};
         printMountain(altitudes);
 
     }
@@ -26,18 +26,17 @@ public class Mountain {
     }
 
     public static String mountainChar(int [] altitudes, int index) {
-        int maxAltitude = 0;
-        for (int elem : altitudes) {
-            maxAltitude = Math.max(elem, maxAltitude);
-        }
+
         String mountainChar = " ";
         if (index == 0) {
             mountainChar = "/";
-        } else if (index == altitudes.length) {
+        } else if (index == altitudes.length-1) {
             mountainChar = "\\";
-        } else if (altitudes[index] == maxAltitude){
+        } else if ((altitudes[index] > altitudes[index + 1]) && (altitudes[index] > altitudes[index - 1])){
             mountainChar = "^";
-        } else if (altitudes[index] < altitudes[index-1]) {
+        }else if (altitudes[index] < altitudes[index-1] && altitudes[index] < altitudes[index+1]) {
+            mountainChar = "V";
+        }else if (altitudes[index] < altitudes[index-1]) {
             mountainChar = "\\";
         } else if (altitudes[index] < altitudes[index+1]){
             mountainChar = "/";
