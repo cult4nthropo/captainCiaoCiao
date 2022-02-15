@@ -4,14 +4,13 @@ public class Mountain {
     public static void main (String[] args) {
         int[] altitudes = {0, 1, 1, 2, 3, 4, 3, 2, 3, 4, 3, 4, 5, 4, 3, 2 ,2 ,1, 0};
         printMountain(altitudes);
-
     }
+
     public static void printMountain(int[] altitudes) {
         int currentHeight = 0;
         for (int elem : altitudes) {
             currentHeight = Math.max (currentHeight, elem);
         }
-
         while (currentHeight >= 0) {
             for (int i = 0; i < altitudes.length; i++) {
                 if (altitudes[i] != currentHeight) {
@@ -26,7 +25,6 @@ public class Mountain {
     }
 
     public static String mountainChar(int [] altitudes, int index) {
-
         String mountainChar = " ";
         if (index == 0) {
             mountainChar = "/";
