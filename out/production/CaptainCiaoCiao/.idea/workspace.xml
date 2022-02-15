@@ -2,24 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7bf30f9-b2ca-4acf-ac85-975cde85c529" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/chapter4.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/chapter4/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/chapter4/.idea/chapter4.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/chapter4/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/chapter4/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/chapter4/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/chapter4/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/chapter4/src/CompileRuntimeTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/chapter4/src/StormyDay.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CompileRuntimeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/StormyDay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chapter3/src/draw_polygon/BermudaTriangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapter3/src/draw_polygon/BermudaTriangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/CaptainCiaoCiao/src/draw_polygon/BermudaTriangle.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/CaptainCiaoCiao/src/draw_polygon/BermudaTriangle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MiniSudoku3x3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/CaptainCiaoCiao/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/CaptainCiaoCiao/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
