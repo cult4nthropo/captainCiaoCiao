@@ -1,4 +1,4 @@
-package captainCiaoCiao.CaptainCiaoCiao.chapter2.src.exercises;
+package chapter2.src.exercises;
 
 public class Lines {
 

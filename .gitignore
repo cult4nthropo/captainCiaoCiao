@@ -4,4 +4,7 @@
 *.iml
 *.class
 *.idea
-*bin
+*.bin
+*.xml
+*.project
+/bin/

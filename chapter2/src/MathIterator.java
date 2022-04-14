@@ -1,4 +1,4 @@
-package captainCiaoCiao.CaptainCiaoCiao.chapter2.src;
+package chapter2.src;
 
 public class MathIterator {
     public static void main (String [] args) {

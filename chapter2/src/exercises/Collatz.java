@@ -1,4 +1,4 @@
-package captainCiaoCiao.CaptainCiaoCiao.chapter2.src.exercises;
+package chapter2.src.exercises;
 
 public class Collatz {
     public  long collatz ( long n) {
@@ -28,7 +28,7 @@ public class Collatz {
                 System.out.println(n);
             }
         }
-        System.out.printf("Die grÃ¶ÃŸte Zahl der Folge ist: %d", max);
+        System.out.printf("Die größte Zahl der Folge ist: %d", max);
         return max;
     }
 

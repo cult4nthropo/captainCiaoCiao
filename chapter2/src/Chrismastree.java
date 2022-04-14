@@ -16,7 +16,7 @@ public class Chrismastree {
                 System.out.print(" ");
             }
             for (int i = 0; i < stars; i ++) {
-                System.out.print( randomBullet == i ? "o" :"*");
+                System.out.print( randomBullet == i ? bullet : leaves);
             }
             System.out.println();
         }
