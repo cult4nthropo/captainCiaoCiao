@@ -1,11 +1,16 @@
 package src;
 
+import java.util.Scanner;
+
 //just to make this clear: this is just an exercise. In reality I would not check for any password in plain text ;)
 public class PasswordQualityChecker {
 
 	public static void main(String[] args) {
-
-		isGoodPassword("GroeLaZ1.safadsterfvyvyxfvcvxcgycyxxdfxczulkluiiljh,klvyxcfvxcv");
+		System.out.println("Please enter your password: ");
+		try (Scanner scanner = new Scanner(System.in)) {
+			String password = scanner.next();
+			isGoodPassword(password);
+		}
 
 	}
 	/*
@@ -26,7 +31,7 @@ public class PasswordQualityChecker {
 			return true;
 		}
 			
-		System.out.print(password + " Didn't match the criteria.\n"
+		System.out.print("This doesn't match the criteria.\n"
 				+ "You nead at least:\n"
 				+ "1 digit, 1 lower and 1 upper case letter\n"
 				+ "1 special sign\n"
