@@ -10,6 +10,7 @@ public class cesarEncryption {
 	}
 	
 	public static String encryptLikeCesar(String string, int key) {
+		//ignored ä, ö, ü and punctuation 
 		//Range for capitals 65-90
 		//Range for small letters 97-122
 		//if the encryption meets the upper boundery, it begins at a/a again
