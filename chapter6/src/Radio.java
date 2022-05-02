@@ -13,6 +13,24 @@ public class Radio {
 	private double minFrequency = MIN_AM_FREQUENCY;
 	private double maxFrequency = MAX_AM_FREQUENCY;
 	
+	public Radio () {
+	}
+	
+	public Radio (double frequency) {
+		this.frequency = frequency;
+	}
+	
+	public Radio (String stationName) {
+		this.frequency = stationNameToFrequency(stationName);
+	}
+	
+	public Radio (Radio someRadio) {
+		setFrequency(someRadio.frequency);
+		setModulation(someRadio.getModulation());
+		if (someRadio.isOn()) this.on();
+		this.volume = someRadio.volume;
+	}
+	
 	private Modulation modulation = Modulation.AM;
 	
 	public boolean isOn() {
