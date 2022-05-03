@@ -31,6 +31,7 @@ public class Radio {
 		this.volume = someRadio.volume;
 	}
 	
+	
 	private Modulation modulation = Modulation.AM;
 	
 	public boolean isOn() {
