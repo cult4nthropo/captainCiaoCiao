@@ -6,8 +6,8 @@ public class Application {
 
 		Radio radio = new Radio();
 		Radio radio1 = new Radio();
-		Radio radio2 = new Radio(0);
-		radio.on();;
+		IceMachine iceMachine = new IceMachine();
+		radio.on();
 		radio.volumeUp();
 		radio.volumeUp();
 		radio.setFrequency(98.8d);
@@ -24,14 +24,19 @@ public class Application {
 		Tracer.trace("End");
 		
 		Ship ship = new Ship();
-		ship.addRadios(radio, radio1, radio2);
-		System.out.println(ship.shipToString());
+		ship.addDevices(radio, radio1, iceMachine);
+		System.out.print(ship.shipToString());
+		int switchedOn = ElectronicDevice.numberOfDevicesSwitchedOn(radio, radio1, iceMachine);
+		System.out.printf(" %d of them switched on.\n", switchedOn);
+		Firebox fb = new Firebox();
+		System.out.println(fb.isOn());
+		fb.off();
 
-		/*
+		
 		TV tv = new TV();
 		tv.off();
-		tv.isOn();
-		*/
+		tv.on();
+		
 	}
 
 }

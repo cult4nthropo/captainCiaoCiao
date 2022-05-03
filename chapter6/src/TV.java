@@ -1,22 +1,23 @@
 package src;
 
-public class TV {
+public class TV extends ElectronicDevice {
 	
-	private boolean isOn;
 	private final MonitorTube monitorTube = new MonitorTube(this);
 	
 	public TV () {
 		
 	}
 	
-	public void isOn() {
-		this.isOn = true;
+	@Override
+	public void on() {
+		super.on();
 		System.out.println("TV is on");
 		monitorTube.on();
 	}
 	
+	@Override
 	public void off() {
-		this.isOn = false;
+		super.off();
 		System.out.println("TV is off");
 		monitorTube.off();
 	}

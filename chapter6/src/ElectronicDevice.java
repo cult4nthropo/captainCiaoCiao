@@ -15,4 +15,13 @@ public class ElectronicDevice {
 	public void off() {
 		isOn = false;
 	}
+	
+	public static int numberOfDevicesSwitchedOn (ElectronicDevice...devices) {
+		int result = 0;
+		for (ElectronicDevice device : devices) {
+			if (device.isOn()) {
+				result++;}
+			}
+		return result;
+	}
 }
