@@ -2,8 +2,8 @@ package src;
 
 import java.util.Objects;
 
-public class Radio {
-	private boolean isOn;
+public class Radio extends ElectronicDevice{
+	
 	private int volume;
 	private double frequency;
 	private double MIN_AM_FREQUENCY = 148.5 * 1000 /*Hz*/;
@@ -34,10 +34,6 @@ public class Radio {
 	
 	private Modulation modulation = Modulation.AM;
 	
-	public boolean isOn() {
-		return isOn;
-	}
-	
 	public int getVolume() {
 		return volume;
 	}
@@ -54,14 +50,6 @@ public class Radio {
 		if ((volume + value) < 100 && (volume + value) > 0) {
 			this.volume += value;
 		}
-	}
-	
-	public void on() {
-		isOn = true;
-	}
-	
-	public void off() {
-		isOn = false;
 	}
 	
 	public Modulation getModulation() {
@@ -82,10 +70,9 @@ public class Radio {
 		changeVolume(-1);
 	}
 	
-	
 	public String radioToString() {
 		System.out.println(minFrequency);
-		return "Radio [Frequency = " + frequency  + modulation + " volume = " + volume + " is " +  (isOn ? "on" : "off") + "]";
+		return "Radio [Frequency = " + frequency  + modulation + " volume = " + volume + " is " +  (isOn() ? "on" : "off") + "]";
 	}
 	
 	public static double stationNameToFrequency(String stationName) {
