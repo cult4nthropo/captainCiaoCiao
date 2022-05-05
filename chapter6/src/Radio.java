@@ -2,42 +2,42 @@ package src;
 
 import java.util.Objects;
 
-public class Radio extends ElectronicDevice{
-	
+public class Radio extends ElectronicDevice {
+
 	private int volume;
 	private double frequency;
-	private double MIN_AM_FREQUENCY = 148.5 * 1000 /*Hz*/;
-	private double MAX_AM_FREQUENCY = 26.1 * 1_000_000 /*Hz*/;
-	private double MIN_FM_FREQUENCY = 87.5 * 1_000_000 /*Hz*/;
-	private double MAX_FM_FREQUENCY = 108.0 * 1_000_000 /*Hz*/;
+	private double MIN_AM_FREQUENCY = 148.5 * 1000 /* Hz */;
+	private double MAX_AM_FREQUENCY = 26.1 * 1_000_000 /* Hz */;
+	private double MIN_FM_FREQUENCY = 87.5 * 1_000_000 /* Hz */;
+	private double MAX_FM_FREQUENCY = 108.0 * 1_000_000 /* Hz */;
 	private double minFrequency = MIN_AM_FREQUENCY;
 	private double maxFrequency = MAX_AM_FREQUENCY;
-	
-	public Radio () {
+
+	public Radio() {
 	}
-	
-	public Radio (double frequency) {
+
+	public Radio(double frequency) {
 		this.frequency = frequency;
 	}
-	
-	public Radio (String stationName) {
+
+	public Radio(String stationName) {
 		this.frequency = stationNameToFrequency(stationName);
 	}
-	
-	public Radio (Radio someRadio) {
+
+	public Radio(Radio someRadio) {
 		setFrequency(someRadio.frequency);
 		setModulation(someRadio.getModulation());
-		if (someRadio.isOn()) this.on();
+		if (someRadio.isOn())
+			this.on();
 		this.volume = someRadio.volume;
 	}
-	
-	
+
 	private Modulation modulation = Modulation.AM;
-	
+
 	public int getVolume() {
 		return volume;
 	}
-	
+
 	public double getFrequency() {
 		return frequency;
 	}
@@ -51,7 +51,7 @@ public class Radio extends ElectronicDevice{
 			this.volume += value;
 		}
 	}
-	
+
 	public Modulation getModulation() {
 		return modulation;
 	}
@@ -65,18 +65,20 @@ public class Radio extends ElectronicDevice{
 	public void volumeUp() {
 		changeVolume(1);
 	}
-	
+
 	public void volumeDown() {
 		changeVolume(-1);
 	}
-	
-	public String radioToString() {
+
+	@Override
+	public String toString() {
 		System.out.println(minFrequency);
-		return "Radio [Frequency = " + frequency  + modulation + " volume = " + volume + " is " +  (isOn() ? "on" : "off") + "]";
+		return super.toString() + "Radio [Frequency = " + frequency + modulation + " volume = " + volume + " is "
+				+ (isOn() ? "on" : "off") + "]";
 	}
-	
+
 	public static double stationNameToFrequency(String stationName) {
-		
+
 		switch (stationName.trim().toLowerCase()) {
 		case "walking the plank":
 			return 98.3d;
