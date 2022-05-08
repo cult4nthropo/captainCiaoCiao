@@ -3,7 +3,11 @@ package src;
 import java.util.Objects;
 
 public class Radio extends ElectronicDevice {
-
+	
+	enum Modulation {
+		AM, FM;
+	}
+	private Modulation modulation = Modulation.AM;
 	private int volume;
 	private double frequency;
 	private double MIN_AM_FREQUENCY = 148.5 * 1000 /* Hz */;
@@ -14,6 +18,7 @@ public class Radio extends ElectronicDevice {
 	private double maxFrequency = MAX_AM_FREQUENCY;
 
 	public Radio() {
+		
 	}
 
 	public Radio(double frequency) {
@@ -31,8 +36,6 @@ public class Radio extends ElectronicDevice {
 			this.on();
 		this.volume = someRadio.volume;
 	}
-
-	private Modulation modulation = Modulation.AM;
 
 	public int getVolume() {
 		return volume;

@@ -44,7 +44,7 @@ public class Application {
 		ea2.setWatt(20);
 		TV grandpasTv = new TV();
 		grandpasTv.setWatt(1000);
-		Comparator<ElectronicDevice> comparator = new ElectronicDeviceWattComparator();
+		Comparator<ElectronicDevice> comparator = new Ship.ElectronicDeviceWattComparator();
 		System.out.println(comparator.compare(ea1, ea2));
 		System.out.println(comparator.compare(ea2, ea1));
 		ship.addDevices(ea1);
