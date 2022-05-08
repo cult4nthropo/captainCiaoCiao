@@ -1,9 +1,11 @@
 package src;
 
 import java.util.ArrayList;
+import java.util.function.Predicate;
 
 public class Ship {
 	private ArrayList<ElectronicDevice> device = new ArrayList<ElectronicDevice>();
+	static final int MAX_CONSUMPTION = 1000;
 
 	public ArrayList<ElectronicDevice> addDevices(ElectronicDevice... devices) {
 		for (ElectronicDevice device : devices) {
@@ -27,6 +29,8 @@ public class Ship {
 			 */
 
 			this.device.add(device);
+			final ElectronicDeviceWattComparator WATT_COMPARATOR = new ElectronicDeviceWattComparator();
+			this.device.sort(WATT_COMPARATOR);
 		}
 
 		return this.device;
@@ -42,7 +46,25 @@ public class Ship {
 		}
 	}
 
+	public ElectronicDevice findMostPowerConsumingElectronicDevice() {
+		ElectronicDevice maxConsuming = java.util.Collections.max(this.device, new ElectronicDeviceWattComparator());
+		System.out.println(
+				"The most consuming device is " + maxConsuming + " with " + maxConsuming.getWatt() / 1000 + "kW.");
+		return maxConsuming;
+	}
+
+	public void removePowerConsumingDevices() {
+		class PowerConsumingDevice implements Predicate<ElectronicDevice> {
+			@Override
+			public boolean test(ElectronicDevice electronicDevice) {
+				return electronicDevice.getWatt() > MAX_CONSUMPTION;
+			}
+		}
+		device.removeIf(new PowerConsumingDevice());
+	}
+
 	public String ShipToString() {
 		return String.format("There are %d devices on board.", numberOfDevicesOnBord());
 	}
+
 }

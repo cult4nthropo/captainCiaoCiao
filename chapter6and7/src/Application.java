@@ -37,14 +37,20 @@ public class Application {
 		/*
 		 * Test the tube -> tv association TV tv = new TV(); tv.off(); tv.on();
 		 */
-
+		Ship ship = new Ship();
 		ElectronicDevice ea1 = new Radio();
 		ea1.setWatt(200);
 		ElectronicDevice ea2 = new Radio();
 		ea2.setWatt(20);
+		TV grandpasTv = new TV();
+		grandpasTv.setWatt(1000);
 		Comparator<ElectronicDevice> comparator = new ElectronicDeviceWattComparator();
 		System.out.println(comparator.compare(ea1, ea2));
 		System.out.println(comparator.compare(ea2, ea1));
+		ship.addDevices(ea1);
+		ship.addDevices(ea2);
+		ship.addDevices(grandpasTv);
+		System.out.println(ship.findMostPowerConsumingElectronicDevice().getWatt());
 	}
 
 }
