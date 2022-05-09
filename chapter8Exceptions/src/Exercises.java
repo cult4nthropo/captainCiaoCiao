@@ -15,8 +15,11 @@ public class Exercises {
 			try {
 				intArray[i] = Integer.parseInt(numbers[i]);
 			} catch (NumberFormatException e) {
+				/*
 				System.out.println("This cannot be converted to an integer");
 				e.printStackTrace();
+				*/
+				intArray[i] = 0;
 			}
 		}
 		return intArray;

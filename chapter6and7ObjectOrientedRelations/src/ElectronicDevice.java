@@ -22,7 +22,10 @@ public class ElectronicDevice {
 		return watt;
 	}
 
-	public void setWatt(int watt) {
+	public void setWatt (int watt) throws IllegalWattException {
+		if (watt <= 0) {
+			throw new IllegalWattException("%d is no valid input. Watt has to be bigger than 0", watt);
+		}
 		this.watt = watt;
 	}
 
