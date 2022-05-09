@@ -11,7 +11,7 @@ import javax.sound.sampled.Clip;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
 
-public class endlesslaughter {
+public class EndlessLaughter {
 
 	public static void main(String[] args) {
 
@@ -35,7 +35,7 @@ public class endlesslaughter {
 					e.printStackTrace();
 				} catch (UnsupportedAudioFileException e) {
 					// log the error
-					Logger.getLogger(endlesslaughter.class.getSimpleName()).log(Level.SEVERE, e.getMessage(), e);
+					Logger.getLogger(EndlessLaughter.class.getSimpleName()).log(Level.SEVERE, e.getMessage(), e);
 				} catch (InterruptedException e) {
 					// no operation
 				}
