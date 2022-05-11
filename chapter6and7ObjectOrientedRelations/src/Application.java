@@ -51,6 +51,11 @@ public class Application {
 		ship.addDevices(ea2);
 		ship.addDevices(grandpasTv);
 		System.out.println(ship.findMostPowerConsumingElectronicDevice().getWatt());
+		try {
+			grandpasTv.setWatt(-1);
+		} catch (IllegalWattException e) {
+			e.printStackTrace();
+		}
 	}
 
 }
