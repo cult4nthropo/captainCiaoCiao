@@ -2,7 +2,7 @@ package src;
 
 import java.util.ArrayList;
 
-public class Exercises {
+public class StringExercises {
 
 	public static void main(String[] args) {
 		System.out.println(isIsogram("Dermatoglyphics"));
