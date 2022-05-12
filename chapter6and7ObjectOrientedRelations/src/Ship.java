@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.function.Predicate;
 
 public class Ship {
-	private ArrayList<ElectronicDevice> device = new ArrayList<ElectronicDevice>();
+	private ArrayList<ElectronicDevice> devices = new ArrayList<ElectronicDevice>();
 	static final int MAX_CONSUMPTION = 1000;
 
 	static class ElectronicDeviceWattComparator implements java.util.Comparator<ElectronicDevice> {
@@ -18,14 +18,14 @@ public class Ship {
 
 	}
 
-	public ArrayList<ElectronicDevice> addDevices(ElectronicDevice... devices) {
+	public ArrayList<ElectronicDevice> addDevices(ElectronicDevice... electronicDevices) {
 		
-		for (ElectronicDevice device : devices) {
+		for (ElectronicDevice device : electronicDevices) {
 
 			try {
 				Radio radio = (Radio) device;
 				if (radio.getVolume() < 1) {
-					this.device.add(radio);
+					this.devices.add(radio);
 					System.out.println("Radio added, already payed GEZ?");
 				} else {
 					continue;
@@ -40,26 +40,26 @@ public class Ship {
 			 * System.out.printf("Radio added, already payed GEZ?\n"); } }
 			 */
 
-			this.device.add(device);
+			this.devices.add(device);
 			final ElectronicDeviceWattComparator WATT_COMPARATOR = new ElectronicDeviceWattComparator();
-			this.device.sort(WATT_COMPARATOR);
+			this.devices.sort(WATT_COMPARATOR);
 		}
 
-		return this.device;
+		return this.devices;
 	}
 
 	public int numberOfDevicesOnBord() {
-		return device.size();
+		return devices.size();
 	}
 
 	public void prepareForHoliday() {
-		for (ElectronicDevice devices : device) {
-			devices.off();
+		for (ElectronicDevice device : devices) {
+			device.off();
 		}
 	}
 
 	public ElectronicDevice findMostPowerConsumingElectronicDevice() {
-		ElectronicDevice maxConsuming = java.util.Collections.max(this.device, new ElectronicDeviceWattComparator());
+		ElectronicDevice maxConsuming = java.util.Collections.max(this.devices, new ElectronicDeviceWattComparator());
 		System.out.println(
 				"The most consuming device is " + maxConsuming + " with " + maxConsuming.getWatt() / 1000 + "kW.");
 		return maxConsuming;
@@ -72,7 +72,7 @@ public class Ship {
 				return electronicDevice.getWatt() > MAX_CONSUMPTION;
 			}
 		}
-		device.removeIf(new PowerConsumingDevice());
+		devices.removeIf(new PowerConsumingDevice());
 	}
 
 	public String ShipToString() {
